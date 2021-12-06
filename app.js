@@ -15,8 +15,9 @@
 //     }
 //   }
 // });
+const texto = $("#texto");
 
-$.getJSON("moneda3.json", function (res, estado) {
+$.getJSON("./moneda3.json", function (res, estado) {
   if (estado === "success") {
     let misDatos = res;
     for (const dato of misDatos) {
@@ -34,14 +35,14 @@ $.getJSON("moneda3.json", function (res, estado) {
   }
 });
 
-$("#primerSelect").on("change", convertir);
+$("#primerSelect").on("change DOMContentLoaded", convertir);
 
 // $("#segundoSelect").on("change", function () {
 //   const car2 = $("#segundoSelect").find(":selected").val();
 //   // console.log(car2);
 // });
 
-$("#segundoSelect").on("change", convertir);
+$("#segundoSelect").on("change DOMContentLoaded", convertir);
 
 // $("#myForm").on("change textInput input", (e) => {
 //   let valIngresado = e.target.value;
@@ -49,7 +50,7 @@ $("#segundoSelect").on("change", convertir);
 //   $("#textoConvertido")[0].value = nuevoValor;
 // });
 
-$("#myForm").on("change textInput input", convertir);
+$("#myForm").on("change textInput input DOMContentLoaded", convertir);
 
 // function convertir() {
 //   let de = document.querySelector("#primerSelect").value;
@@ -75,8 +76,15 @@ function convertir() {
       let rateDestino = data[a - 1].rate;
       let convertido = (valorDe * rateDestino) / rateBase;
       document.querySelector("#textoConvertido").value = convertido.toFixed(3);
+
+      $(".hola").remove();
+      texto.append(
+        `<h2 class="hola">
+        De ${valorDe} ${data[de - 1].code} a ${data[a - 1].code}
+        </h2>`
+      );
     })
     .catch((error) =>
-      console.log(`Hubo un problema en la petición Fetch ${error.message}`)
+      console.log(`Hubo un problema en la petición Fetch: ${error.message}`)
     );
 }

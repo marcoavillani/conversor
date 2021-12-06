@@ -19,13 +19,14 @@
   </head>
   <body>
     <h1>Cotizar</h1>
+    <div id="texto">
+      <h2 class="Hola"></h2>
+    </div>
 
     <h2>DE:</h2>
     <form id="myForm">
-      <div class="control has-icons-left">
-        <div class="select is-medium">
-          <select id="primerSelect">
-            <!-- <option selected value="1">
+      <select id="primerSelect">
+        <!-- <option selected value="1">
               <h1><strong>ARS</strong></h1>
               <p>Peso Argentino</p>
             </option>
@@ -37,10 +38,9 @@
               <h1><strong>EUR</strong></h1>
               <p>Euros</p>
             </option> -->
-          </select>
-        </div>
-      </div>
-      <input id="valorDe" type="number" min="0" step="any" />
+      </select>
+      <br />
+      <input id="valorDe" type="number" min="0" value="1" step="any" />
     </form>
     <h2>A:</h2>
     <div class="control has-icons-left">
