@@ -1,0 +1,17 @@
+body {
+  margin: 10px;
+}
+.form-select {
+  width: 200px;
+  padding: 10px;
+  margin: 10px;
+}
+input {
+  margin: 10px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

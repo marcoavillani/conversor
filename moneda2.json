@@ -1,0 +1,29 @@
+[
+     {
+          "baseid": "1",
+          "basecode": "ARS",
+          "rates": {
+               "ARS": "1",
+               "USD": "0.0099",
+               "EUR": "0.0088"
+          }
+     },
+     {
+          "baseid": "2",
+          "basecode": "USD",
+          "rates": {
+               "ARS": "101.115",
+               "USD": "1",
+               "EUR": "0.8858"
+          }
+     },
+     {
+          "baseid": "3",
+          "basecode": "EUR",
+          "rates": {
+               "ARS": "114.1512",
+               "USD": "1.129",
+               "EUR": "1"
+          }
+     }
+]
