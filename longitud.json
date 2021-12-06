@@ -1,0 +1,57 @@
+[
+     {
+          "id": "1",
+          "code": "Nanómetros",
+          "rate": "1000000000"
+     },
+     {
+          "id": "2",
+          "code": "Micrones",
+          "rate": "1000000"
+     },
+     {
+          "id": "3",
+          "code": "Milímetros",
+          "rate": "1000"
+     },
+     {
+          "id": "4",
+          "code": "Centímetros",
+          "rate": "100"
+     },
+     {
+          "id": "5",
+          "code": "Metros",
+          "rate": "1"
+     },
+     {
+          "id": "6",
+          "code": "Kilómetros",
+          "rate": "0.001"
+     },
+     {
+          "id": "7",
+          "code": "Pulgadas",
+          "rate": "39.37008"
+     },
+     {
+          "id": "8",
+          "code": "Pies",
+          "rate": "3.28084"
+     },
+     {
+          "id": "9",
+          "code": "Yardas",
+          "rate": "1.093613"
+     },
+     {
+          "id": "10",
+          "code": "Millas",
+          "rate": "0.000621"
+     },
+     {
+          "id": "11",
+          "code": "Millas náuticas",
+          "rate": "0.00054"
+     }
+]

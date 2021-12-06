@@ -15,9 +15,28 @@
 //     }
 //   }
 // });
+let botonElegido = 0;
+let conversionElegida = "divisas";
+
+$("#btn1").on("click", function (e) {
+  e.preventDefault();
+  botonElegido = 1;
+  conversionElegida = "divisas";
+  console.log(conversionElegida);
+});
+
+$("#btn2").on("click", function (e) {
+  e.preventDefault();
+  botonElegido = 2;
+  conversionElegida = "longitud";
+  console.log(conversionElegida);
+});
+
 const texto = $("#texto");
 
-$.getJSON("./moneda3.json", function (res, estado) {
+console.log(`./${conversionElegida}.json`);
+
+$.getJSON(`./${conversionElegida}.json`, function (res, estado) {
   if (estado === "success") {
     let misDatos = res;
     for (const dato of misDatos) {
@@ -69,7 +88,7 @@ function convertir() {
   let de = document.querySelector("#primerSelect").value;
   let valorDe = document.querySelector("#valorDe").value;
   let a = document.querySelector("#segundoSelect").value;
-  fetch("./moneda3.json")
+  fetch(`./${conversionElegida}.json`)
     .then((response) => response.json())
     .then((data) => {
       let rateBase = data[de - 1].rate;
