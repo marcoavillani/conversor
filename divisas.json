@@ -1,92 +1,97 @@
 [
      {
-          "id": "1",
+          "currency": "Peso Argentino",
           "code": "ARS",
-          "rate": "101.101"
+          "rate": "101.38033"
      },
      {
-          "id": "2",
+          "currency": "Dólar Australiano",
           "code": "AUD",
-          "rate": "1.42803"
+          "rate": "1.400962"
      },
      {
-          "id": "3",
+          "currency": "Boliviano",
           "code": "BOB",
-          "rate": "6.72166"
+          "rate": "6.8863455"
      },
      {
-          "id": "4",
+          "currency": "Real Brasilero",
           "code": "BRL",
-          "rate": "5.65175"
+          "rate": "5.6145309"
      },
      {
-          "id": "5",
+          "currency": "Dólar Canadiense",
           "code": "CAD",
-          "rate": "1.2838"
+          "rate": "1.2639471"
      },
      {
-          "id": "6",
+          "currency": "Franco Suizo",
           "code": "CHF",
-          "rate": "0.91773"
+          "rate": "0.92354067"
      },
      {
-          "id": "7",
+          "currency": "Peso Chileno",
           "code": "CLP",
-          "rate": "840.585"
+          "rate": "839.92489"
      },
      {
-          "id": "8",
+          "currency": "Yuan Chino",
           "code": "CNY",
-          "rate": "6.3754"
+          "rate": "6.3536078"
      },
      {
-          "id": "9",
+          "currency": "Peso Colombiano",
           "code": "COP",
-          "rate": "3959.6"
+          "rate": "3910.9399"
      },
      {
-          "id": "10",
-          "code": "ECS",
-          "rate": "24.094"
-     },
-     {
-          "id": "11",
+          "currency": "Euro",
           "code": "EUR",
-          "rate": "0.88376"
+          "rate": "0.88547542"
      },
      {
-          "id": "12",
+          "currency": "Libra Esterlina",
+          "code": "GBP",
+          "rate": "0.75420758"
+     },
+     {
+          "currency": "Yen Japonés",
+          "code": "JPY",
+          "rate": "113.46477"
+     },
+     {
+          "currency": "Peso Mexicano",
           "code": "MXN",
-          "rate": "21.2154"
+          "rate": "21.008601"
      },
      {
-          "id": "13",
+          "currency": "Sol Peruano",
           "code": "PEN",
-          "rate": "4.05895"
+          "rate": "4.0782185"
      },
      {
-          "id": "14",
+          "currency": "Guaraní Paraguayo",
           "code": "PYG",
-          "rate": "6710.61"
+          "rate": "6823.8543"
      },
      {
-          "id": "15",
+          "currency": "Rublo Ruso",
           "code": "RUB",
-          "rate": "73.9122"
+          "rate": "73.94758"
      },
      {
-          "id": "16",
+          "currency": "Dólar Estadounidense",
           "code": "USD",
           "rate": "1"
      },
      {
-          "id": "17",
+          "currency": "Peso Uruguayo",
           "code": "UYU",
-          "rate": "43.6438"
+          "rate": "44.117595"
      },
      {
-          "id": "18",
-          "code": "VES",
-          "rate": "4.61922"
+          "currency": "Bolivar Venezolano",
+          "code": "VEF",
+          "rate": "462304.59"
      }
 ]

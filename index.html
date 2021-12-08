@@ -4,59 +4,90 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
     />
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./src/styles.css" />
     <title>Conversor de Unidades</title>
   </head>
   <body>
-    <button id="btn1">DIVISAS</button>
-    <button id="btn2">LONGITUD</button>
-    <h1>Cotizar</h1>
-    <div id="texto">
-      <h2 class="Hola"></h2>
+    <div class="sidebar">
+      <div class="logo-content">
+        <div class="logo">
+          <div class="logo-name">Conversor</div>
+        </div>
+        <i class="bx bx-menu" id="btn-menu"></i>
+      </div>
+      <ul class="nav-list">
+        <li>
+          <a href="#"
+            ><i class="bx bx-dollar"></i>
+            <span class="links-name">Divisas</span></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><i class="bx bx-ruler"></i>
+            <span class="links-name">Longitud</span></a
+          >
+        </li>
+      </ul>
     </div>
+    <div class="home-content">
+      <div class="text">Conversor de unidades</div>
+      <div>
+        <button id="btn1">DIVISAS</button>
+        <button id="btn2">LONGITUD</button>
+        <h1>Cotizar</h1>
+        <div id="texto">
+          <h2 class="Hola"></h2>
+        </div>
 
-    <h2>DE:</h2>
-    <form id="myForm">
-      <select id="primerSelect">
-        <!-- <option selected value="1">
-              <h1><strong>ARS</strong></h1>
-              <p>Peso Argentino</p>
-            </option>
-            <option value="2">
-              <h1><strong>USD</strong></h1>
-              <p>Dólares Estadounidenses</p>
-            </option>
-            <option value="3">
-              <h1><strong>EUR</strong></h1>
-              <p>Euros</p>
-            </option> -->
-      </select>
-      <br />
-      <input id="valorDe" type="number" min="0" value="1" step="any" />
-    </form>
-    <h2>A:</h2>
-    <div class="control has-icons-left">
-      <div class="select is-medium">
-        <select id="segundoSelect"></select>
+        <h2>DE:</h2>
+
+        <select
+          id="primerSelect"
+          class="form-select"
+          aria-label="Default select example"
+        ></select>
+        <br />
+        <input
+          id="valorDe"
+          class="inputs"
+          type="number"
+          min="0"
+          value="1"
+          step="any"
+        />
+        <br />
+        <button id="invertir">INVERTIR</button>
+
+        <h2>A:</h2>
+
+        <select
+          id="segundoSelect"
+          class="form-select"
+          aria-label="Default select example"
+        ></select>
+
+        <input type="number" id="inputConvertido" class="inputs" readonly />
       </div>
     </div>
 
-    <input
-      type="number"
-      id="textoConvertido"
-      readonly
-      onmousedown="return false"
-    />
     <script
       src="https://code.jquery.com/jquery-3.6.0.js"
       integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
