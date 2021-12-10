@@ -45,7 +45,7 @@ $("#sidebarLongitud").click((e) => {
   e.preventDefault();
   conversionElegida = "longitud";
   $(".opciones").remove();
-  longitud();
+  longitudPeso();
 });
 
 $("#sidebarDivisa").click((e) => {
@@ -55,8 +55,15 @@ $("#sidebarDivisa").click((e) => {
   divisas();
 });
 
-function longitud() {
-  $.getJSON(`./longitud.json`, function (res, estado) {
+$("#sidebarPeso").click((e) => {
+  e.preventDefault();
+  conversionElegida = "peso";
+  $(".opciones").remove();
+  longitudPeso();
+});
+
+function longitudPeso() {
+  $.getJSON(`./${conversionElegida}.json`, function (res, estado) {
     if (estado === "success") {
       let misDatos = res;
       let contador = 0;
