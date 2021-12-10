@@ -7,14 +7,17 @@ btn.addEventListener("click", () => {
 });
 // -----------------------------------------------------------------------
 
+// ------------------ASIGNACIÓN DE VARIABLES------------------------------
+
 let conversionElegida = "divisas";
-const texto = $("#texto");
 
 let primerSelect = document.querySelector("#primerSelect");
 let $primerSelect = $("#primerSelect");
 
 let segundoSelect = document.querySelector("#segundoSelect");
 let $segundoSelect = $("#segundoSelect");
+
+// -----------------------------------------------------------------------
 
 // -----------------ARMADO DE OPCIONES DEL SELECT ------------------------
 
@@ -38,25 +41,64 @@ let $segundoSelect = $("#segundoSelect");
 //     }
 //   });
 
-$.getJSON(`./${conversionElegida}.json`, function (res, estado) {
-  if (estado === "success") {
-    let misDatos = res;
-    let contador = 0;
-    for (const dato of misDatos) {
-      $primerSelect.append(`
-                                  <option id="optionPrimerSelect${contador}" value="${contador}">
-                                    <h1>${dato.code}</h1>  ||  <p>${dato.currency}</p>
-                                  </option>
-      `);
-      $segundoSelect.append(`
-                                  <option id="optionSegundoSelect${contador}" value="${contador}">
-                                    <h1>${dato.code}</h1>  ||  <p>${dato.currency}</p>
-                                  </option>
-      `);
-      contador++;
-    }
-  }
+$("#sidebarLongitud").click((e) => {
+  e.preventDefault();
+  conversionElegida = "longitud";
+  $(".opciones").remove();
+  longitud();
 });
+
+$("#sidebarDivisa").click((e) => {
+  e.preventDefault();
+  conversionElegida = "divisas";
+  $(".opciones").remove();
+  divisas();
+});
+
+function longitud() {
+  $.getJSON(`./longitud.json`, function (res, estado) {
+    if (estado === "success") {
+      let misDatos = res;
+      let contador = 0;
+      for (const dato of misDatos) {
+        $primerSelect.append(`
+                                    <option class="opciones" id="optionPrimerSelect${contador}" value="${contador}">
+                                      <h1>${dato.code}</h1>
+                                    </option>
+        `);
+        $segundoSelect.append(`
+                                    <option class="opciones" id="optionSegundoSelect${contador}" value="${contador}">
+                                      <h1>${dato.code}</h1>
+                                    </option>
+        `);
+        contador++;
+      }
+    }
+  });
+}
+
+function divisas() {
+  $.getJSON(`./divisas.json`, function (res, estado) {
+    if (estado === "success") {
+      let misDatos = res;
+      let contador = 0;
+      for (const dato of misDatos) {
+        $primerSelect.append(`
+                                    <option class="opciones" id="optionPrimerSelect${contador}" value="${contador}">
+                                      <h1>${dato.code}</h1>  ||  <p>${dato.currency}</p>
+                                    </option>
+        `);
+        $segundoSelect.append(`
+                                    <option class="opciones" id="optionSegundoSelect${contador}" value="${contador}">
+                                      <h1>${dato.code}</h1>  ||  <p>${dato.currency}</p>
+                                    </option>
+        `);
+        contador++;
+      }
+    }
+  });
+}
+
 // ------------------------------------------------------------------------------------------------
 
 // -------------------BOTÓN DE INVERTIR------------------------------------------------------------
@@ -125,13 +167,13 @@ function convertir() {
         let convertido = (valorDe * rateDestino) / rateBase;
         document.querySelector("#inputConvertido").value =
           convertido.toFixed(3);
-        $(".hola").remove();
-        texto.append(
-          `<h2 class="hola">
-        De ${valorDe} ${data[de].currency} a ${data[a].currency}
-        </h2>`
-        );
-        $(texto).animate({ opacity: "0.5" });
+        $(".textoConversion").remove();
+        if (conversionElegida == "divisas") {
+          $("#texto").append(`<h2 class="textoConversion">
+          De ${valorDe} ${data[de].currency} a ${data[a].currency}
+        </h2>`);
+          $("#texto").animate({ opacity: "0.5" });
+        }
       })
       .catch((err) =>
         console.log(`Hubo un problema en la petición Fetch: ${err.message}`)
@@ -149,6 +191,7 @@ function convertir() {
 // }
 
 window.addEventListener("DOMContentLoaded", (e) => {
+  divisas();
   almacenarSelect1(e);
   let ultimaSeleccion1 = localStorage.getItem("ultimaSeleccion1");
   primerSelect.value = ultimaSeleccion1;

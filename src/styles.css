@@ -128,11 +128,13 @@ body {
   background-color: #ceecf3;
 }
 
-.home-content .text {
-  font-size: 25px;
-  font-weight: 500;
+.home-content h1 {
+  font-size: 50px;
+  font-weight: 550;
   color: #1d1b31;
   margin: 12px;
+  text-align: center;
+  padding-right: 12%;
 }
 
 .sidebar.active ~ .home-content {
@@ -146,12 +148,10 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-.titulo {
-  padding-left: 12px;
-}
 .inputs {
   background-color: #ebffff;
-  padding: 10px;
+  padding: 20px;
+  padding-left: 50px;
   font-size: 30px;
   border-radius: 5px;
   border-top: 0;
@@ -180,11 +180,13 @@ input::-webkit-inner-spin-button {
   display: flex;
   flex-direction: row;
   margin-top: 50px;
+  justify-content: center;
+  padding-left: 8%;
+  padding-right: 20%;
 }
 
 .container h2 {
-  position: relative;
-  left: 140px;
+  text-align: center;
   font-weight: 700;
   font-size: 25px;
 }
@@ -197,8 +199,19 @@ input::-webkit-inner-spin-button {
   margin: auto;
 }
 
+#texto {
+  margin-top: 50px;
+  text-align: center;
+  padding-left: 8%;
+  padding-right: 20%;
+}
+
 @media (max-width: 800px) {
   .container {
     flex-direction: column;
+  }
+  #texto {
+    text-align: center;
+    padding: 0;
   }
 }
