@@ -13,10 +13,6 @@
     />
 
     <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
-    />
-    <link
       href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
       rel="stylesheet"
     />
@@ -25,6 +21,8 @@
     <title>Conversor de Unidades</title>
   </head>
   <body>
+    <!--------------------- SIDEBAR-------------------------------->
+
     <div class="sidebar">
       <div class="logo-content">
         <div class="logo">
@@ -34,57 +32,68 @@
       </div>
       <ul class="nav-list">
         <li>
-          <a href="#"
+          <a href="#" id="sidebarDivisa"
             ><i class="bx bx-dollar"></i>
             <span class="links-name">Divisas</span></a
           >
         </li>
         <li>
-          <a href="#"
+          <a href="#" id="sidebarLongitud"
             ><i class="bx bx-ruler"></i>
             <span class="links-name">Longitud</span></a
           >
         </li>
       </ul>
     </div>
+
+    <!------------------------- HOME ------------------------------>
+
     <div class="home-content">
-      <div class="text">Conversor de unidades</div>
-      <div>
-        <button id="btn1">DIVISAS</button>
-        <button id="btn2">LONGITUD</button>
-        <h1>Cotizar</h1>
+      <h1 class="titulo">Conversor de Unidades</h1>
+      <div class="container">
+        <div class="card1">
+          <h2>DE</h2>
+
+          <select
+            style="width: 300px; text-align: center; cursor: pointer"
+            id="primerSelect"
+            class="form-select"
+            aria-label="Default select example"
+          >
+            <option disabled selected>
+              Seleccione una moneda
+            </option>
+          </select>
+          <input
+            id="valorDe"
+            class="inputs"
+            type="number"
+            min="0"
+            value="1"
+            step="any"
+          />
+        </div>
+
+        <a href="" id="btnInvertir"
+          ><i class="bx bx-transfer" id="invertir"></i
+        ></a>
+        <div class="card2">
+          <h2>A</h2>
+
+          <select
+            style="width: 300px; text-align: center; cursor: pointer"
+            id="segundoSelect"
+            class="form-select"
+            aria-label="Default select example"
+          >
+            <option disabled selected>Seleccione una moneda</option>
+          </select>
+
+          <input type="number" id="inputConvertido" class="inputs" readonly />
+        </div>
         <div id="texto">
           <h2 class="Hola"></h2>
         </div>
-
-        <h2>DE:</h2>
-
-        <select
-          id="primerSelect"
-          class="form-select"
-          aria-label="Default select example"
-        ></select>
-        <br />
-        <input
-          id="valorDe"
-          class="inputs"
-          type="number"
-          min="0"
-          value="1"
-          step="any"
-        />
-        <br />
-        <button id="invertir">INVERTIR</button>
-
-        <h2>A:</h2>
-
-        <select
-          id="segundoSelect"
-          class="form-select"
-          aria-label="Default select example"
-        ></select>
-
-        <input type="number" id="inputConvertido" class="inputs" readonly />
       </div>
     </div>
 

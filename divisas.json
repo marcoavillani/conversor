@@ -1,96 +1,115 @@
 [
      {
-          "currency": "Peso Argentino",
+          "id": "1",
+          "currency": "Pesos Argentinos",
           "code": "ARS",
           "rate": "101.38033"
      },
      {
-          "currency": "Dólar Australiano",
+          "id": "2",
+          "currency": "Dólares Australianos",
           "code": "AUD",
           "rate": "1.400962"
      },
      {
-          "currency": "Boliviano",
+          "id": "3",
+          "currency": "Bolivianos",
           "code": "BOB",
           "rate": "6.8863455"
      },
      {
-          "currency": "Real Brasilero",
+          "id": "4",
+          "currency": "Reales Brasileros",
           "code": "BRL",
           "rate": "5.6145309"
      },
      {
-          "currency": "Dólar Canadiense",
+          "id": "5",
+          "currency": "Dólares Canadienses",
           "code": "CAD",
           "rate": "1.2639471"
      },
      {
-          "currency": "Franco Suizo",
+          "id": "6",
+          "currency": "Francos Suizos",
           "code": "CHF",
           "rate": "0.92354067"
      },
      {
-          "currency": "Peso Chileno",
+          "id": "7",
+          "currency": "Pesos Chilenos",
           "code": "CLP",
           "rate": "839.92489"
      },
      {
-          "currency": "Yuan Chino",
+          "id": "8",
+          "currency": "Yuanes Chinos",
           "code": "CNY",
           "rate": "6.3536078"
      },
      {
-          "currency": "Peso Colombiano",
+          "id": "9",
+          "currency": "Pesos Colombianos",
           "code": "COP",
           "rate": "3910.9399"
      },
      {
-          "currency": "Euro",
+          "id": "10",
+          "currency": "Euros",
           "code": "EUR",
           "rate": "0.88547542"
      },
      {
-          "currency": "Libra Esterlina",
+          "id": "11",
+          "currency": "Libras Esterlinas",
           "code": "GBP",
           "rate": "0.75420758"
      },
      {
-          "currency": "Yen Japonés",
+          "id": "12",
+          "currency": "Yenes Japoneses",
           "code": "JPY",
           "rate": "113.46477"
      },
      {
-          "currency": "Peso Mexicano",
+          "id": "13",
+          "currency": "Pesos Mexicanos",
           "code": "MXN",
           "rate": "21.008601"
      },
      {
-          "currency": "Sol Peruano",
+          "id": "14",
+          "currency": "Soles Peruanos",
           "code": "PEN",
           "rate": "4.0782185"
      },
      {
-          "currency": "Guaraní Paraguayo",
+          "id": "15",
+          "currency": "Guaraníes Paraguayos",
           "code": "PYG",
           "rate": "6823.8543"
      },
      {
-          "currency": "Rublo Ruso",
+          "id": "16",
+          "currency": "Rublos Rusos",
           "code": "RUB",
           "rate": "73.94758"
      },
      {
-          "currency": "Dólar Estadounidense",
+          "id": "17",
+          "currency": "Dólares Estadounidenses",
           "code": "USD",
           "rate": "1"
      },
      {
-          "currency": "Peso Uruguayo",
+          "id": "18",
+          "currency": "Pesos Uruguayos",
           "code": "UYU",
           "rate": "44.117595"
      },
      {
-          "currency": "Bolivar Venezolano",
+          "id": "19",
+          "currency": "Bolivares Venezolanos",
           "code": "VEF",
           "rate": "462304.59"
      }
