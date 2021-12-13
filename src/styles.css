@@ -215,3 +215,10 @@ input::-webkit-inner-spin-button {
     padding: 0;
   }
 }
+
+.ultimos {
+  text-align: center;
+}
+#array2 {
+  margin-top: 14px;
+}

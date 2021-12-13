@@ -190,37 +190,42 @@ function convertir() {
 
 // ----------------------------------------------------------------------------------------------------
 
-// function almacenarIngresos(ingreso1, ingreso2) {
-//   localStorage.setItem("ultimaSeleccion1", ingreso1);
-//   localStorage.setItem("ultimaSeleccion2", ingreso2);
-//   ultimaSeleccion1 = localStorage.getItem("ultimaSeleccion1");
-//   ultimaSeleccion2 = localStorage.getItem("ultimaSeleccion2");
-// }
+// -----------------ALMACENAMIENTO DE LA OPCIÓN ELEGIDA------------------------------------------------
 
 window.addEventListener("DOMContentLoaded", (e) => {
   divisas();
-  almacenarSelect1(e);
-  let ultimaSeleccion1 = localStorage.getItem("ultimaSeleccion1");
-  primerSelect.value = ultimaSeleccion1;
-  let ultimaSeleccion2 = localStorage.getItem("ultimaSeleccion2");
-  segundoSelect.value = ultimaSeleccion2;
-  console.log(segundoSelect.value);
+  almacenarSelect1();
+  almacenarSelect2();
 });
-
-function almacenarSelect1() {
-  fetch(`./${conversionElegida}.json`)
-    .then((res) => res.json())
-    .then((data) => {
-      let de = primerSelect.value;
-      localStorage.setItem("ultimaSeleccion1", data[de].id);
-    });
-}
 
 function almacenarSelect2() {
   fetch(`./${conversionElegida}.json`)
     .then((res) => res.json())
     .then((data) => {
       let a = segundoSelect.value;
-      localStorage.setItem("ultimaSeleccion2", data[a].id);
+      if (isNaN(primerSelect.value) == false) {
+        localStorage.setItem("ultimaSeleccion2", data[a].code);
+        let ultimo2 = localStorage.getItem("ultimaSeleccion2");
+        $("#array2").remove();
+        $(".card2").append(
+          `<p class="ultimos "id="array2">Último seleccionado: ${ultimo2}</p>`
+        );
+      }
+    });
+}
+function almacenarSelect1() {
+  fetch(`./${conversionElegida}.json`)
+    .then((res) => res.json())
+    .then((data) => {
+      let de = primerSelect.value;
+      if (isNaN(primerSelect.value) == false) {
+        localStorage.setItem("ultimaSeleccion1", data[de].code);
+        let ultimo1 = localStorage.getItem("ultimaSeleccion1");
+
+        $("#array1").remove();
+        $(".card1").append(
+          `<p class ="ultimos" id="array1">Último seleccionado: ${ultimo1}</p>`
+        );
+      }
     });
 }
